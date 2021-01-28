@@ -262,7 +262,7 @@ export const Menu: React.FC<MenuProps> = ({
     }
 
     hasExitAnimation(animation)
-      ? setState(state => ({ willLeave: state.visible }))
+      ? setState(state => ({ willLeave: state.visible, visible: state.visible ? false : state.visible }))
       : setState(state => ({ visible: state.visible ? false : state.visible }));
   }
 
